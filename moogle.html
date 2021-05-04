@@ -3,17 +3,24 @@
     <head>
         <meta />
         <style>
+            html, body {
+                display: flex;
+                font-family: arial,sans-serif;
+                font-size: 12px;
+                color: #222;
+                height: 100%;
+                width: 100%;
+            }
             img {
                 display: block;
                 margin: auto;
             }  
-            .content {
-                max-width:500px;
-                margin: auto;
-            }
             input {
-                height: 34px;
-                width: 500px;
+                display:block;
+                margin: auto;
+                margin-top: 30px;
+                height: 45px;
+                width: 550px;
                 font-size: 16px;
                 font-family: arial, sans-serif;
                 background-color: #fff;
@@ -21,6 +28,11 @@
                 border-width: 1px;
                 border-style: solid;
                 border-radius: 25px 25px 25px 25px;
+                background-image: url('data:image/png;base64,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');
+                background-repeat: no-repeat;
+                background-size: 20px 20px;
+                background-position: 10px center;
+                padding-left: 40px;
             }  
             input:hover {
                 background-color: #fff;
@@ -33,19 +45,64 @@
                 border-color: rgba(223,225,229,0); 
                 outline: none;  
             }
+            div {
+                text-align: center;        
+            }
+            button {
+                margin: 30px 5px 5px 0px;
+                height: 35px;
+                background-color: #f8f9fa;
+                border: 1px solid #f8f9fa;
+                border-radius: 4px;
+                font-family: arial,sans-serif;
+                font-size: 14px;
+                padding: 0 16px;
+            }
+            button:hover {
+                box-shadow: 0 1px 1px rgba(0,0,0,.1);
+                background-color: #f8f9fa;
+                border: 1px solid #dadce0;
+            }
+            p {
+                margin-top: 25px;
+            }
+            .container {
+                margin: auto;
 
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                
+            }
+            li {
+                display: inline;
+                right: 0px;
+                
+            }
           
         </style>
     </head>
     <body>
-        <div class="content">
+        <div>
+            <ul>
+                <li><a href="https://mail.google.com/mail/&ogbl">Gmail</a></li>
+                <li><a href=">https://www.google.ae/imghp?hl=en&ogbl">Images</a></li>
+                <li><a href="https://www.google.ae/intl/en/about/products">Symbol</a></li>
+                <li><a href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=GAZAmgQ">Sign in</a></li>
+            </ul>
+        </div>
+        <div class="container">
             <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo">
             <form>
-                <input maxlength="2048" type="text">
-                <button type="submit"> Google Search</button>
-                <button formaction="https://www.google.com/doodles"> I'm Feeling Lucky</button>
+                <input maxlength="2048" type="search">
+                <div>
+                    <button type="submit"> Google Search</button>
+                    <button formaction="https://www.google.com/doodles"> I'm Feeling Lucky</button>
+                </div>
             </form>
             <p>Google offered in: <a target="blank" href="https://www.google.com/setprefs?sig=0_MDxD1Rf2n_JKmFtDDKR8SPIMhhQ%3D&hl=ar&source=homepage&sa=X&ved=0ahUKEwjduIznn6PwAhWO3oUKHSjkCuMQ2ZgBCA0"> العربية</a>&nbsp; <a target="_blank" href="https://www.google.com/setprefs?sig=0_MDxD1Rf2n_JKmFtDDKR8SPIMhhQ%3D&hl=fa&source=homepage&sa=X&ved=0ahUKEwjduIznn6PwAhWO3oUKHSjkCuMQ2ZgBCA4"> فارسی</a>&nbsp; <a target="_blank" href="https://www.google.com/setprefs?sig=0_MDxD1Rf2n_JKmFtDDKR8SPIMhhQ%3D&hl=hi&source=homepage&sa=X&ved=0ahUKEwjduIznn6PwAhWO3oUKHSjkCuMQ2ZgBCA8"> हिन्दी</a>&nbsp; <a target="_blank" href="https://www.google.com/setprefs?sig=0_MDxD1Rf2n_JKmFtDDKR8SPIMhhQ%3D&hl=ur&source=homepage&sa=X&ved=0ahUKEwjduIznn6PwAhWO3oUKHSjkCuMQ2ZgBCBA">اردو</a>&nbsp; </p>
         </div>
-        </body>
+    </body>
 </html>

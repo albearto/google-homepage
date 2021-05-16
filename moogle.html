@@ -4,7 +4,7 @@
         <meta />
         <style>
             html, body {
-                display: flex;
+                display: grid;
                 font-family: arial,sans-serif;
                 font-size: 12px;
                 color: #222;
@@ -12,12 +12,9 @@
                 width: 100%;
             }
             img {
-                display: block;
                 margin: auto;
             }  
             input {
-                display:block;
-                margin: auto;
                 margin-top: 30px;
                 height: 45px;
                 width: 550px;
@@ -48,7 +45,24 @@
             div {
                 text-align: center;        
             }
-            button {
+            .signinbutton {
+                color: #fff;
+                margin-left: 8px;
+                margin-right: 8px;
+                background-color: #1a73e8;
+                border: 1px solid transparent;
+                min-width: 96px;
+                padding: 9px 23px;
+                vertical-align: middle;
+                border-radius: 4px;
+                font-family: arial,sans-serif;
+                font-size: 14px;
+            }
+            .signinbutton:hover {
+                background: #2b7de9;
+                box-shadow: 0 1px 2px 0 rgba(66,133,244,0.3),0 1px 3px 1px rgba(66,133,244,0.15);
+            }
+            .searchbuttons {
                 margin: 30px 5px 5px 0px;
                 height: 35px;
                 background-color: #f8f9fa;
@@ -58,7 +72,7 @@
                 font-size: 14px;
                 padding: 0 16px;
             }
-            button:hover {
+            .searchbuttons:hover {
                 box-shadow: 0 1px 1px rgba(0,0,0,.1);
                 background-color: #f8f9fa;
                 border: 1px solid #dadce0;
@@ -66,31 +80,34 @@
             p {
                 margin-top: 25px;
             }
-            .container {
-                margin: auto;
 
+            .top {
+                height: 60px;
             }
             ul {
                 list-style-type: none;
-                margin: 0;
+                margin: 10px;
                 padding: 0;
-                
+                text-align: right;               
             }
             li {
-                display: inline;
-                right: 0px;
-                
+                display: inline-block;   
+            }
+            li a{
+                color: #222;
+                padding: 14px 16px;
             }
           
         </style>
     </head>
     <body>
-        <div>
+        
+        <div class="top">
             <ul>
                 <li><a href="https://mail.google.com/mail/&ogbl">Gmail</a></li>
                 <li><a href=">https://www.google.ae/imghp?hl=en&ogbl">Images</a></li>
-                <li><a href="https://www.google.ae/intl/en/about/products">Symbol</a></li>
-                <li><a href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=GAZAmgQ">Sign in</a></li>
+                <li><a href="https://www.google.ae/intl/en/about/products"><img src="apps_black_24dp.svg"></a></li>
+                <li><form><button class="signinbutton" formaction="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=GAZAmgQ"> Sign in</button></form></li>
             </ul>
         </div>
         <div class="container">
@@ -98,11 +115,12 @@
             <form>
                 <input maxlength="2048" type="search">
                 <div>
-                    <button type="submit"> Google Search</button>
-                    <button formaction="https://www.google.com/doodles"> I'm Feeling Lucky</button>
+                    <button class="searchbuttons" type="submit"> Google Search</button>
+                    <button class="searchbuttons" formaction="https://www.google.com/doodles"> I'm Feeling Lucky</button>
                 </div>
             </form>
             <p>Google offered in: <a target="blank" href="https://www.google.com/setprefs?sig=0_MDxD1Rf2n_JKmFtDDKR8SPIMhhQ%3D&hl=ar&source=homepage&sa=X&ved=0ahUKEwjduIznn6PwAhWO3oUKHSjkCuMQ2ZgBCA0"> العربية</a>&nbsp; <a target="_blank" href="https://www.google.com/setprefs?sig=0_MDxD1Rf2n_JKmFtDDKR8SPIMhhQ%3D&hl=fa&source=homepage&sa=X&ved=0ahUKEwjduIznn6PwAhWO3oUKHSjkCuMQ2ZgBCA4"> فارسی</a>&nbsp; <a target="_blank" href="https://www.google.com/setprefs?sig=0_MDxD1Rf2n_JKmFtDDKR8SPIMhhQ%3D&hl=hi&source=homepage&sa=X&ved=0ahUKEwjduIznn6PwAhWO3oUKHSjkCuMQ2ZgBCA8"> हिन्दी</a>&nbsp; <a target="_blank" href="https://www.google.com/setprefs?sig=0_MDxD1Rf2n_JKmFtDDKR8SPIMhhQ%3D&hl=ur&source=homepage&sa=X&ved=0ahUKEwjduIznn6PwAhWO3oUKHSjkCuMQ2ZgBCBA">اردو</a>&nbsp; </p>
         </div>
+    
     </body>
 </html>

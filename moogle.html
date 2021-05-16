@@ -58,6 +58,18 @@
                 font-family: arial,sans-serif;
                 font-size: 14px;
             }
+            .apps {
+                color: #5f6368;
+                fill: currentColor;
+                opacity: 1;
+                vertical-align: middle;
+            }
+            .apps:hover{
+                background-color: rgba(60,64,67,0.08);
+                border-radius: 50%;
+                
+                
+            }
             .signinbutton:hover {
                 background: #2b7de9;
                 box-shadow: 0 1px 2px 0 rgba(66,133,244,0.3),0 1px 3px 1px rgba(66,133,244,0.15);
@@ -86,7 +98,7 @@
             }
             ul {
                 list-style-type: none;
-                margin: 10px;
+                margin: 8px;
                 padding: 0;
                 text-align: right;               
             }
@@ -95,7 +107,8 @@
             }
             li a{
                 color: #222;
-                padding: 14px 16px;
+                padding: 10px 8px;
+                
             }
           
         </style>
@@ -106,7 +119,7 @@
             <ul>
                 <li><a href="https://mail.google.com/mail/&ogbl">Gmail</a></li>
                 <li><a href=">https://www.google.ae/imghp?hl=en&ogbl">Images</a></li>
-                <li><a href="https://www.google.ae/intl/en/about/products"><img src="apps_black_24dp.svg"></a></li>
+                <li><a href="https://www.google.ae/intl/en/about/products"><svg class="apps" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="-8 -8 40 40" width="40px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/></svg></a></li>
                 <li><form><button class="signinbutton" formaction="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=GAZAmgQ"> Sign in</button></form></li>
             </ul>
         </div>

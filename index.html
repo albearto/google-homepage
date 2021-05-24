@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta />
+        <style>
+            * {
+                box-sizing: border-box;
+            }           
+            
+            html, body {
+                display:grid;
+                font-family: arial,sans-serif;
+                font-size: 12px;
+                color: #222;
+                min-height: 100vh;
+                width: 100%;
+                grid-template-rows: auto 1fr auto;
+                margin: 0;
+            }
+            img {
+                margin: auto;
+            }  
+            input {
+                margin-top: 30px;
+                height: 45px;
+                width: 550px;
+                font-size: 16px;
+                font-family: arial, sans-serif;
+                background-color: #fff;
+                border-color: rgba(223,225,229,1);
+                border-width: 1px;
+                border-style: solid;
+                border-radius: 25px 25px 25px 25px;
+                background-image: url('data:image/png;base64,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');
+                background-repeat: no-repeat;
+                background-size: 20px 20px;
+                background-position: 10px center;
+                padding-left: 40px;
+            }  
+            input:hover {
+                background-color: #fff;
+                box-shadow: 0 1px 6px rgba(32,33,36,.28);
+                border-color: rgba(223,225,229,0)
+            }
+            input:focus {
+                background-color: #fff;
+                box-shadow: 0 1px 6px rgba(32,33,36,.28);
+                border-color: rgba(223,225,229,0); 
+                outline: none;  
+            }
+            div {
+                text-align: center;        
+            }
+            .signinbutton {
+                color: #fff;
+                margin-left: 8px;
+                margin-right: 8px;
+                background-color: #1a73e8;
+                border: 1px solid transparent;
+                min-width: 96px;
+                padding: 9px 23px;
+                vertical-align: middle;
+                border-radius: 4px;
+                font-family: arial,sans-serif;
+                font-size: 14px;
+            }
+            .apps {
+                color: #5f6368;
+                fill: currentColor;
+                opacity: 1;
+                vertical-align: middle;
+            }
+            .apps:hover{
+                background-color: rgba(60,64,67,0.08);
+                border-radius: 50%;
+                
+                
+            }
+            .signinbutton:hover {
+                background: #2b7de9;
+                box-shadow: 0 1px 2px 0 rgba(66,133,244,0.3),0 1px 3px 1px rgba(66,133,244,0.15);
+            }
+            .searchbuttons {
+                margin: 30px 5px 5px 0px;
+                height: 35px;
+                background-color: #f8f9fa;
+                border: 1px solid #f8f9fa;
+                border-radius: 4px;
+                font-family: arial,sans-serif;
+                font-size: 14px;
+                padding: 0 16px;
+            }
+            .searchbuttons:hover {
+                box-shadow: 0 1px 1px rgba(0,0,0,.1);
+                background-color: #f8f9fa;
+                border: 1px solid #dadce0;
+            }
+            p {
+                margin-top: 25px;
+            }
+
+            .top {
+                height: 60px;
+            }
+            .container {
+                margin: auto;
+            }
+            .bottom {
+                height: 95px;
+                background-color:  #f2f2f2;
+                bottom: 0;
+            }
+            .btop {
+                height: 50px;
+                text-align: left;
+                padding: 15px 30px;
+                border-bottom: 1px solid #dadce0;
+                font-family: arial,sans-serif;
+                font-size: 14px;
+                color: rgba(0,0,0,.54);
+              
+            }
+            .bbottom {
+                font-family: arial,sans-serif;
+                font-size: 15px;
+                color: rgba(0,0,0,.54);
+                padding: 0px 10px;
+            }
+            .top ul {
+                list-style-type: none;
+                margin: 8px;
+                padding: 0;
+                text-align: right;               
+            }
+            .top li {
+                display: inline-block;   
+            }
+            .top li a{
+                color: #222;
+                padding: 10px 8px;      
+            }
+            .bottom ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 12px 15px;
+                text-align: left;                 
+            }
+            .bottom li {
+                display: inline-block;
+            }
+            .bottom li a{
+                color: rgba(0,0,0,.54);
+                padding: 10px 10px; 
+            }
+            a {
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+
+
+          
+        </style>
+    </head>
+    <body>
+        
+        <div class="top">
+            <ul>
+                <li><a href="https://mail.google.com/mail/&ogbl">Gmail</a></li>
+                <li><a href=">https://www.google.ae/imghp?hl=en&ogbl">Images</a></li>
+                <li><a href="https://www.google.ae/intl/en/about/products"><svg class="apps" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="-8 -8 40 40" width="40px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/></svg></a></li>
+                <li><form><button class="signinbutton" formaction="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=GAZAmgQ"> Sign in</button></form></li>
+            </ul>
+        </div>
+        <div class="container">
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo">
+            <form>
+                <input maxlength="2048" type="search">
+                <div>
+                    <button class="searchbuttons" type="submit"> Google Search</button>
+                    <button class="searchbuttons" formaction="https://www.google.com/doodles"> I'm Feeling Lucky</button>
+                </div>
+            </form>
+            <p>Google offered in: <a target="blank" href="https://www.google.com/setprefs?sig=0_MDxD1Rf2n_JKmFtDDKR8SPIMhhQ%3D&hl=ar&source=homepage&sa=X&ved=0ahUKEwjduIznn6PwAhWO3oUKHSjkCuMQ2ZgBCA0"> العربية</a>&nbsp; <a target="_blank" href="https://www.google.com/setprefs?sig=0_MDxD1Rf2n_JKmFtDDKR8SPIMhhQ%3D&hl=fa&source=homepage&sa=X&ved=0ahUKEwjduIznn6PwAhWO3oUKHSjkCuMQ2ZgBCA4"> فارسی</a>&nbsp; <a target="_blank" href="https://www.google.com/setprefs?sig=0_MDxD1Rf2n_JKmFtDDKR8SPIMhhQ%3D&hl=hi&source=homepage&sa=X&ved=0ahUKEwjduIznn6PwAhWO3oUKHSjkCuMQ2ZgBCA8"> हिन्दी</a>&nbsp; <a target="_blank" href="https://www.google.com/setprefs?sig=0_MDxD1Rf2n_JKmFtDDKR8SPIMhhQ%3D&hl=ur&source=homepage&sa=X&ved=0ahUKEwjduIznn6PwAhWO3oUKHSjkCuMQ2ZgBCBA">اردو</a>&nbsp; </p>
+        </div>
+        <footer class="bottom">
+            <div class="btop">
+                United Arab Emirates                
+            </div> 
+            <div class="bbottom">   
+                <ul>
+                    <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjHjaS-pa_wAhUL3BoKHRamA7EQkNQCCBE&url=https%3A%2F%2Fabout.google%2F%3Futm_source%3Dgoogle-AE%26utm_medium%3Dreferral%26utm_campaign%3Dhp-footer%26fg%3D1&usg=AOvVaw2o6PHKFybiwEEL9L90RAe4">About</a></li>
+                    <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjHjaS-pa_wAhUL3BoKHRamA7EQkdQCCBI&url=https%3A%2F%2Fwww.google.com%2Fintl%2Fen_ae%2Fads%2F%3Fsubid%3Dww-ww-et-g-awa-a-g_hpafoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpafooter%26fg%3D1&usg=AOvVaw1rwvVwCluoGmv2W6njFKrO">Advertising</a></li>
+                    <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjHjaS-pa_wAhUL3BoKHRamA7EQktQCCBM&url=https%3A%2F%2Fwww.google.com%2Fservices%2F%3Fsubid%3Dww-ww-et-g-awa-a-g_hpbfoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpbfooter%26fg%3D1&usg=AOvVaw2SJ4zwRVXKyZr53qG9dm4K">Business</a></li>
+                    <li><a href="https://google.com/search/howsearchworks/?fg=1">How Search Works</a></li>
+                    <li style="float:right"><a>Settings</a></li>
+                    <li style="float:right"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjHjaS-pa_wAhUL3BoKHRamA7EQ8qwCCBU&url=https%3A%2F%2Fpolicies.google.com%2Fterms%3Fhl%3Den-AE%26fg%3D1&usg=AOvVaw20OzFUHhZERN0vDJO-rSC3">Terms</a></li>
+                    <li style="float:right"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjHjaS-pa_wAhUL3BoKHRamA7EQ8awCCBQ&url=https%3A%2F%2Fpolicies.google.com%2Fprivacy%3Fhl%3Den-AE%26fg%3D1&usg=AOvVaw2UORDPWT6wDEzAYlNAwexj">Privacy</a></li>
+                    
+                    
+                </ul>
+            </div>   
+        </footer>
+    
+    </body>
+</html>

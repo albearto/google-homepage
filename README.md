@@ -1,2 +1,1 @@
-This is a beginner project to deconstruct an existing web page and rebuild it.
-Upon completion, this file will be updated to describe what skills I have demonstrated.
+This is a beginner project to deconstruct an existing Google web page and rebuild it. There is a lot of bodging ni the code but the page should appear similar to the real thing!

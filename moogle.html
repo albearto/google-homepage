@@ -3,13 +3,19 @@
     <head>
         <meta />
         <style>
+            * {
+                box-sizing: border-box;
+            }           
+            
             html, body {
-                display: grid;
+                display:grid;
                 font-family: arial,sans-serif;
                 font-size: 12px;
                 color: #222;
-                height: 100%;
+                min-height: 100vh;
                 width: 100%;
+                grid-template-rows: auto 1fr auto;
+                margin: 0;
             }
             img {
                 margin: auto;
@@ -96,20 +102,64 @@
             .top {
                 height: 60px;
             }
-            ul {
+            .container {
+                margin: auto;
+            }
+            .bottom {
+                height: 95px;
+                background-color:  #f2f2f2;
+                bottom: 0;
+            }
+            .btop {
+                height: 50px;
+                text-align: left;
+                padding: 15px 30px;
+                border-bottom: 1px solid #dadce0;
+                font-family: arial,sans-serif;
+                font-size: 14px;
+                color: rgba(0,0,0,.54);
+              
+            }
+            .bbottom {
+                font-family: arial,sans-serif;
+                font-size: 15px;
+                color: rgba(0,0,0,.54);
+                padding: 0px 10px;
+            }
+            .top ul {
                 list-style-type: none;
                 margin: 8px;
                 padding: 0;
                 text-align: right;               
             }
-            li {
+            .top li {
                 display: inline-block;   
             }
-            li a{
+            .top li a{
                 color: #222;
-                padding: 10px 8px;
-                
+                padding: 10px 8px;      
             }
+            .bottom ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 12px 15px;
+                text-align: left;                 
+            }
+            .bottom li {
+                display: inline-block;
+            }
+            .bottom li a{
+                color: rgba(0,0,0,.54);
+                padding: 10px 10px; 
+            }
+            a {
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+
+
           
         </style>
     </head>
@@ -134,6 +184,24 @@
             </form>
             <p>Google offered in: <a target="blank" href="https://www.google.com/setprefs?sig=0_MDxD1Rf2n_JKmFtDDKR8SPIMhhQ%3D&hl=ar&source=homepage&sa=X&ved=0ahUKEwjduIznn6PwAhWO3oUKHSjkCuMQ2ZgBCA0"> العربية</a>&nbsp; <a target="_blank" href="https://www.google.com/setprefs?sig=0_MDxD1Rf2n_JKmFtDDKR8SPIMhhQ%3D&hl=fa&source=homepage&sa=X&ved=0ahUKEwjduIznn6PwAhWO3oUKHSjkCuMQ2ZgBCA4"> فارسی</a>&nbsp; <a target="_blank" href="https://www.google.com/setprefs?sig=0_MDxD1Rf2n_JKmFtDDKR8SPIMhhQ%3D&hl=hi&source=homepage&sa=X&ved=0ahUKEwjduIznn6PwAhWO3oUKHSjkCuMQ2ZgBCA8"> हिन्दी</a>&nbsp; <a target="_blank" href="https://www.google.com/setprefs?sig=0_MDxD1Rf2n_JKmFtDDKR8SPIMhhQ%3D&hl=ur&source=homepage&sa=X&ved=0ahUKEwjduIznn6PwAhWO3oUKHSjkCuMQ2ZgBCBA">اردو</a>&nbsp; </p>
         </div>
+        <footer class="bottom">
+            <div class="btop">
+                United Arab Emirates                
+            </div> 
+            <div class="bbottom">   
+                <ul>
+                    <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjHjaS-pa_wAhUL3BoKHRamA7EQkNQCCBE&url=https%3A%2F%2Fabout.google%2F%3Futm_source%3Dgoogle-AE%26utm_medium%3Dreferral%26utm_campaign%3Dhp-footer%26fg%3D1&usg=AOvVaw2o6PHKFybiwEEL9L90RAe4">About</a></li>
+                    <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjHjaS-pa_wAhUL3BoKHRamA7EQkdQCCBI&url=https%3A%2F%2Fwww.google.com%2Fintl%2Fen_ae%2Fads%2F%3Fsubid%3Dww-ww-et-g-awa-a-g_hpafoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpafooter%26fg%3D1&usg=AOvVaw1rwvVwCluoGmv2W6njFKrO">Advertising</a></li>
+                    <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjHjaS-pa_wAhUL3BoKHRamA7EQktQCCBM&url=https%3A%2F%2Fwww.google.com%2Fservices%2F%3Fsubid%3Dww-ww-et-g-awa-a-g_hpbfoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpbfooter%26fg%3D1&usg=AOvVaw2SJ4zwRVXKyZr53qG9dm4K">Business</a></li>
+                    <li><a href="https://google.com/search/howsearchworks/?fg=1">How Search Works</a></li>
+                    <li style="float:right"><a>Settings</a></li>
+                    <li style="float:right"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjHjaS-pa_wAhUL3BoKHRamA7EQ8qwCCBU&url=https%3A%2F%2Fpolicies.google.com%2Fterms%3Fhl%3Den-AE%26fg%3D1&usg=AOvVaw20OzFUHhZERN0vDJO-rSC3">Terms</a></li>
+                    <li style="float:right"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjHjaS-pa_wAhUL3BoKHRamA7EQ8awCCBQ&url=https%3A%2F%2Fpolicies.google.com%2Fprivacy%3Fhl%3Den-AE%26fg%3D1&usg=AOvVaw2UORDPWT6wDEzAYlNAwexj">Privacy</a></li>
+                    
+                    
+                </ul>
+            </div>   
+        </footer>
     
     </body>
 </html>
